@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bookingServiceAndHour.css">
+    <title>Booking - Car Wash</title>
+</head>
+<body>
+    <header>
+        <a class="back-arrow" href="welcomePage.html">&larr; <Back to Welcome></a>
+        <h1>Изберете услуги</h1>
+    </header>
+
+    <div class="booking-container">
+        <section class="services">
+            
+        </section>
+
+        <aside class="basket">
+            <h2>Общ прегред на услугите</h2>
+            <ul id="basketItems">
+                <!-- Basket items will be dynamically added here using JavaScript -->
+            </ul>
+            <p id="total">Общо: 0.00лв</p>
+            <button onclick="redirectToNextPage()" class="submitButton">Продължи</button>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Car Wash Booking</p>
+    </footer>
+
+    <script src="bookingService.js"></script>
+</body>
+</html>
+

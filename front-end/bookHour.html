@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bookHour.css">
+    <title>Booking - Car Wash</title>
+</head>
+<body>
+    <header>
+        <a class="back-arrow" href="bookingService.html">&larr; <Back to Welcome></a>
+        <h1>Резервирай час</h1>
+    </header>
+
+    <div class="booking-container">
+        <section class="services">
+            <section class="services" id="servicesContainer">
+                <!-- Available hours will be dynamically added here using JavaScript -->
+            </section>
+        </section>
+
+        <aside class="basket">
+            <h2>Общ прегред на услугите</h2>
+            <ul id="basketItems">
+                <!-- Basket items will be dynamically added here using JavaScript -->
+            </ul>
+            <form id="clientInfoForm">
+                <label for="clientName">Име:</label>
+                <input type="text" id="clientName" name="clientName" required>
+        
+                <label for="clientEmail">Имейл:</label>
+                <input type="email" id="clientEmail" name="clientEmail" required>
+        
+                <label for="clientPhone">Телефонен номер:</label>
+                <input type="tel" id="clientPhone" name="clientPhone" required>
+        
+                <label for="clientLocation">Местоположение за услугата:</label>
+                <input type="text" id="clientLocation" name="clientLocation" required>
+            </form>
+            <p totalAmount="0" id="total">Общо: 0.00лв</p>
+            <button onclick="openPaymentModal()" class="submitButton" id="sentReservation">Резервирай</button>
+        </aside>
+    </div>
+    
+    <!-- Payment Modal -->
+<div id="paymentModal" class="modal">
+    <div class="modal-content">
+        <!-- Payment form goes here -->
+        <span class="close" onclick="closePaymentModal()">&times;</span>
+        <h2>Enter Payment Information</h2>
+        <form id="paymentForm">
+            <!-- Card Number -->
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" required>
+
+            <!-- Card Owner -->
+            <label for="cardOwner">Card Owner:</label>
+            <input type="text" id="cardOwner" name="cardOwner" required>
+
+            <!-- Expiration Date -->
+            <label for="expirationDate">Expiration Date:</label>
+            <input type="text" id="expirationDate" name="expirationDate" placeholder="MM/YYYY" required>
+
+            <!-- CVV -->
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required>
+
+            <!-- Submit Button -->
+            <button type="button" onclick="sentReservation()">Submit Payment</button>
+        </form>
+    </div>
+</div>
+    <footer>
+        <p>&copy; 2023 Car Wash Booking</p>
+    </footer>
+    <script src="bookHour.js"></script>
+</body>
+</html>
